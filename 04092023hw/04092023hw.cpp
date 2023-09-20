@@ -5,91 +5,89 @@ using namespace std;
 
 class Cat {
 private:
-    double tail_length = 0.5; // длина хвостика :3
-    int ears_count = 2; // ушки :3
-    string fur_color = "white"; // цвет шерсти :3
-    string eyes_color = "blue"; // цвет глазок :3
-    string nick = "Barsyk"; // имя котика :3
-    int age = 1; // возраст котика :3
+    double tail_length = 0.5;
+    int ears_count = 2;
+    string fur_color = "white";
+    string eyes_color = "blue";
+    string nick = "Barsyk";
+    int age = 1;
     int paws = 4;
     int satiety;
 
 public:
-    // Геттеры и сеттеры для полей класса Cat
     double GetTailLength() const {
-        return tail_length;
+        return this->tail_length;
     }
 
-    void SetTailLength(double length) {
-        tail_length = length;
+    void SetTailLength(double tail_length) {
+        this->tail_length = tail_length;
     }
 
     int GetEarsCount() const {
-        return ears_count;
+        return this->ears_count;
     }
 
-    void SetEarsCount(int count) {
-        ears_count = count;
+    void SetEarsCount(int ears_count) {
+        this->ears_count = ears_count;
     }
 
     string GetFurColor() const {
-        return fur_color;
+        return this->fur_color;
     }
 
-    void SetFurColor(const string& color) {
-        fur_color = color;
+    void SetFurColor(const string& fur_color) {
+        this->fur_color = fur_color;
     }
 
     string GetEyesColor() const {
-        return eyes_color;
+        return this->eyes_color;
     }
 
-    void SetEyesColor(const string& color) {
-        eyes_color = color;
+    void SetEyesColor(const string& eyes_color) {
+        this->eyes_color = eyes_color;
     }
 
     string GetNick() const {
-        return nick;
+        return this->nick;
     }
 
-    void SetNick(const string& name) {
-        nick = name;
+    void SetNick(const string& nick) {
+        this->nick = nick;
     }
 
     int GetAge() const {
-        return age;
+        return this->age;
     }
 
-    void SetAge(int catAge) {
-        age = catAge;
+    void SetAge(int age) {
+        this->age = age;
     }
 
     int GetPaws() const {
-        return paws;
+        return this->paws;
     }
 
-    void SetPaws(int pawCount) {
-        paws = pawCount;
+    void SetPaws(int paws) {
+        this->paws = paws;
     }
 
     int GetSatiety() const {
-        return satiety;
+        return this->satiety;
     }
 
-    void SetSatiety(int level) {
-        satiety = level;
+    void SetSatiety(int satiety) {
+        this->satiety = satiety;
     }
 
-    // Остальные методы класса Cat
     void MakeMeow() {
         cout << "Meow)" << endl;
     }
 
     void Walk() {
-        if (paws == 4) {
+        if (this->paws == 4) {
             cout << "котик ходит)))" << endl;
         }
-        else if (paws > 4) {
+        else if (this->paws > 4) {
             cout << ".....";
         }
         else {
@@ -99,247 +97,241 @@ public:
 
     void Eat(string meal) {
         cout << "котик кушает " << meal << endl;
-        satiety += 30;
+        this->satiety += 30;
     }
 
     void ChangeFurColor(const string& new_color) {
-        fur_color = new_color;
+        this->fur_color = new_color;
         cout << "Цвет шерсти котика изменен на " << new_color << endl;
     }
 };
 
 class Human {
 private:
-    string name = "Степан"; // имя человека
-    int age = 27; // возраст человека
-    string sex = "Мужской"; // пол человека
-    float height = 172.5; // рост человека
-    float weight = 65.3; // вес человека
-    bool isStudent = false; // учится ли человек
-    bool isEmployed = false; // работает ли человек
+    string name = "Степан";
+    int age = 27;
+    string sex = "Мужской";
+    float height = 172.5;
+    float weight = 65.3;
+    bool isStudent = false;
+    bool isEmployed = false;
 
 public:
-    // Геттеры и сеттеры для полей класса Human
     string GetName() const {
-        return name;
+        return this->name;
     }
 
-    void SetName(const string& humanName) {
-        name = humanName;
+    void SetName(const string& name) {
+        this->name = name;
     }
 
     int GetAge() const {
-        return age;
+        return this->age;
     }
 
-    void SetAge(int humanAge) {
-        age = humanAge;
+    void SetAge(int age) {
+        this->age = age;
     }
 
     string GetSex() const {
-        return sex;
+        return this->sex;
     }
 
-    void SetSex(const string& humanSex) {
-        sex = humanSex;
+    void SetSex(const string& sex) {
+        this->sex = sex;
     }
 
     float GetHeight() const {
-        return height;
+        return this->height;
     }
 
-    void SetHeight(float humanHeight) {
-        height = humanHeight;
+    void SetHeight(float height) {
+        this->height = height;
     }
 
     float GetWeight() const {
-        return weight;
+        return this->weight;
     }
 
-    void SetWeight(float humanWeight) {
-        weight = humanWeight;
+    void SetWeight(float weight) {
+        this->weight = weight;
     }
 
     bool IsStudent() const {
-        return isStudent;
+        return this->isStudent;
     }
 
-    void SetIsStudent(bool studentStatus) {
-        isStudent = studentStatus;
+    void SetIsStudent(bool isStudent) {
+        this->isStudent = isStudent;
     }
 
     bool IsEmployed() const {
-        return isEmployed;
+        return this->isEmployed;
     }
 
-    void SetIsEmployed(bool employedStatus) {
-        isEmployed = employedStatus;
+    void SetIsEmployed(bool isEmployed) {
+        this->isEmployed = isEmployed;
     }
 
-    // Остальные методы класса Human
     void Breathe() {
-        cout << name << " дышит... Пока что)" << endl;
+        cout << this->name << " дышит... Пока что)" << endl;
     }
 
     void HumanEat() {
-        cout << name << " что-то кушает..." << endl;
+        cout << this->name << " что-то кушает..." << endl;
     }
 
     void StandStraight() {
-        cout << name << " стоит как солдатик..." << endl;
+        cout << this->name << " стоит как солдатик..." << endl;
     }
 
     void Run() {
-        cout << name << " бежит..." << endl;
+        cout << this->name << " бежит..." << endl;
     }
 
     void Swim() {
-        cout << name << " как минимум не тонет..." << endl;
+        cout << this->name << " как минимум не тонет..." << endl;
     }
 };
 
 class Room {
 private:
-    float square = 19; // площадь комнаты
-    float temperature = 21.3; // температура в комнате
-    float airHumidity = 75; // влажность воздуха
-    bool isOccupied = false; // есть ли кто-то в комнате?
-    int happinessLevel = 55; // уровень счастья
-    string roomName = "Гостинная"; // имя комнаты
+    float square = 19;
+    float temperature = 21.3;
+    float airHumidity = 75;
+    bool isOccupied = false;
+    int happinessLevel = 55;
+    string roomName = "Гостинная";
 
 public:
-    // Геттеры и сеттеры для полей класса Room
     float GetSquare() const {
-        return square;
+        return this->square;
     }
 
-    void SetSquare(float roomSquare) {
-        square = roomSquare;
+    void SetSquare(float square) {
+        this->square = square;
     }
 
     float GetTemperature() const {
-        return temperature;
+        return this->temperature;
     }
 
-    void SetTemperature(float roomTemperature) {
-        temperature = roomTemperature;
+    void SetTemperature(float temperature) {
+        this->temperature = temperature;
     }
 
     float GetAirHumidity() const {
-        return airHumidity;
+        return this->airHumidity;
     }
 
-    void SetAirHumidity(float humidity) {
-        airHumidity = humidity;
+    void SetAirHumidity(float airHumidity) {
+        this->airHumidity = airHumidity;
     }
 
     bool IsOccupied() const {
-        return isOccupied;
+        return this->isOccupied;
     }
 
-    void SetIsOccupied(bool occupiedStatus) {
-        isOccupied = occupiedStatus;
+    void SetIsOccupied(bool isOccupied) {
+        this->isOccupied = isOccupied;
     }
 
     int GetHappinessLevel() const {
-        return happinessLevel;
+        return this->happinessLevel;
     }
 
-    void SetHappinessLevel(int level) {
-        happinessLevel = level;
+    void SetHappinessLevel(int happinessLevel) {
+        this->happinessLevel = happinessLevel;
     }
 
     string GetRoomName() const {
-        return roomName;
+        return this->roomName;
     }
 
-    void SetRoomName(const string& name) {
-        roomName = name;
+    void SetRoomName(const string& roomName) {
+        this->roomName = roomName;
     }
 
-    // Остальные методы класса Room
     void Cry() {
-        if (happinessLevel <= 49) {
-            cout << "О нет! Уровень счастья в " << roomName << ": " << happinessLevel << "." << endl;
+        if (this->happinessLevel <= 49) {
+            cout << "О нет! Уровень счастья в " << this->roomName << ": " << this->happinessLevel << "." << endl;
         }
         else {
-            cout << "Счастье впорядке в " << roomName << "! Уровень счастья: " << happinessLevel << "." << endl;
+            cout << "Счастье впорядке в " << this->roomName << "! Уровень счастья: " << this->happinessLevel << "." << endl;
         }
     }
 
     void ThrowParty() {
-        happinessLevel += 10;
-        cout << "Вечеринка в " << roomName << "! Уровень счастья повышен до " << happinessLevel << "." << endl;
+        this->happinessLevel += 10;
+        cout << "Вечеринка в " << this->roomName << "! Уровень счастья повышен до " << this->happinessLevel << "." << endl;
     }
 };
 
 class Phone {
 private:
-    int batteryPercentage = 71; // уровень заряда батареи
-    int simUsed = 2; // количество сим-карт
-    float height = 9.5; // высота
-    float width = 3.5; // ширина
-    float weight = 120; // вес
-    string brand = "Unknown"; // бренд телефона
+    int batteryPercentage = 71;
+    int simUsed = 2;
+    float height = 9.5;
+    float width = 3.5;
+    float weight = 120;
+    string brand = "Unknown";
 
 public:
-    // Геттеры и сеттеры для полей класса Phone
     int GetBatteryPercentage() const {
-        return batteryPercentage;
+        return this->batteryPercentage;
     }
 
-    void SetBatteryPercentage(int percentage) {
-        batteryPercentage = percentage;
+    void SetBatteryPercentage(int batteryPercentage) {
+        this->batteryPercentage = batteryPercentage;
     }
 
     int GetSimUsed() const {
-        return simUsed;
+        return this->simUsed;
     }
 
-    void SetSimUsed(int simCount) {
-        simUsed = simCount;
+    void SetSimUsed(int simUsed) {
+        this->simUsed = simUsed;
     }
 
     float GetHeight() const {
-        return height;
+        return this->height;
     }
 
-    void SetHeight(float phoneHeight) {
-        height = phoneHeight;
+    void SetHeight(float height) {
+        this->height = height;
     }
 
     float GetWidth() const {
-        return width;
+        return this->width;
     }
 
-    void SetWidth(float phoneWidth) {
-        width = phoneWidth;
+    void SetWidth(float width) {
+        this->width = width;
     }
 
     float GetWeight() const {
-        return weight;
+        return this->weight;
     }
 
-    void SetWeight(float phoneWeight) {
-        weight = phoneWeight;
+    void SetWeight(float weight) {
+        this->weight = weight;
     }
 
     string GetBrand() const {
-        return brand;
+        return this->brand;
     }
 
-    void SetBrand(const string& phoneBrand) {
-        brand = phoneBrand;
+    void SetBrand(const string& brand) {
+        this->brand = brand;
     }
 
-    // Остальные методы класса Phone
     void OutgoingCall(string number) {
-        if (batteryPercentage < 10) {
+        if (this->batteryPercentage < 10) {
             cout << "Недостаточно заряда. Батарея разряжена." << endl;
             return;
         }
 
-        if (simUsed == 0) {
+        if (this->simUsed == 0) {
             cout << "Сим-карта не вставлена. Вставьте сим-карту, прежде чем звонить." << endl;
             return;
         }
@@ -350,11 +342,11 @@ public:
             cout << "Гудки..." << endl;
         }
         cout << "Абонент ответил!" << endl;
-        batteryPercentage -= 10;
+        this->batteryPercentage -= 10;
     }
 
     void IncomingCall(string number) {
-        if (simUsed == 0) {
+        if (this->simUsed == 0) {
             cout << "Сим-карта не вставлена. Невозможно принять звонок." << endl;
             return;
         }
@@ -371,89 +363,87 @@ public:
     }
 
     void Music(string track) {
-        if (batteryPercentage < 20) {
+        if (this->batteryPercentage < 20) {
             cout << "Недостаточно заряда. Воспроизведение музыки невозможно." << endl;
             return;
         }
 
         cout << "Сейчас играет: " << track << endl;
-        batteryPercentage -= 5;
+        this->batteryPercentage -= 5;
     }
 };
 
 class Car {
 private:
-    string color = "Красный"; // цвет
-    string model = "Хонда Цивик"; // модель
-    float engineCapacity = 1599.9; // объем
-    float maxSpeed = 210; // топ спид
-    float fuelConsumption = 9.2; // расход
-    bool isLocked = false; // заблокирована ли машина
-    float currentFuel = 50.0; // текущий уровень топлива в литрах
+    string color = "Красный";
+    string model = "Хонда Цивик";
+    float engineCapacity = 1599.9;
+    float maxSpeed = 210;
+    float fuelConsumption = 9.2;
+    bool isLocked = false;
+    float currentFuel = 50.0;
 
 public:
-    // Геттеры и сеттеры для полей класса Car
     string GetColor() const {
-        return color;
+        return this->color;
     }
 
-    void SetColor(const string& carColor) {
-        color = carColor;
+    void SetColor(const string& color) {
+        this->color = color;
     }
 
     string GetModel() const {
-        return model;
+        return this->model;
     }
 
-    void SetModel(const string& carModel) {
-        model = carModel;
+    void SetModel(const string& model) {
+        this->model = model;
     }
 
     float GetEngineCapacity() const {
-        return engineCapacity;
+        return this->engineCapacity;
     }
 
-    void SetEngineCapacity(float capacity) {
-        engineCapacity = capacity;
+    void SetEngineCapacity(float engineCapacity) {
+        this->engineCapacity = engineCapacity;
     }
 
     float GetMaxSpeed() const {
-        return maxSpeed;
+        return this->maxSpeed;
     }
 
-    void SetMaxSpeed(float speed) {
-        maxSpeed = speed;
+    void SetMaxSpeed(float maxSpeed) {
+        this->maxSpeed = maxSpeed;
     }
 
     float GetFuelConsumption() const {
-        return fuelConsumption;
+        return this->fuelConsumption;
     }
 
-    void SetFuelConsumption(float consumption) {
-        fuelConsumption = consumption;
+    void SetFuelConsumption(float fuelConsumption) {
+        this->fuelConsumption = fuelConsumption;
     }
 
     bool IsLocked() const {
-        return isLocked;
+        return this->isLocked;
     }
 
-    void SetIsLocked(bool lockedStatus) {
-        isLocked = lockedStatus;
+    void SetIsLocked(bool isLocked) {
+        this->isLocked = isLocked;
     }
 
     float GetCurrentFuel() const {
-        return currentFuel;
+        return this->currentFuel;
     }
 
-    void SetCurrentFuel(float fuelLevel) {
-        currentFuel = fuelLevel;
+    void SetCurrentFuel(float currentFuel) {
+        this->currentFuel = currentFuel;
     }
 
-    // Остальные методы класса Car
     void DisableAlarm(bool alertStatus = false) {
-        if (isLocked) {
+        if (this->isLocked) {
             cout << "Пик-пик! Сигнализация снята." << endl;
-            isLocked = false;
+            this->isLocked = false;
         }
         else {
             cout << "Машина уже разблокирована." << endl;
@@ -461,9 +451,9 @@ public:
     }
 
     void ActivateAlarm(bool alertStatus = true) {
-        if (!isLocked) {
+        if (!this->isLocked) {
             cout << "Пик-пик! Сигнализация установлена." << endl;
-            isLocked = true;
+            this->isLocked = true;
         }
         else {
             cout << "Машина уже заблокирована." << endl;
@@ -471,7 +461,7 @@ public:
     }
 
     void Acceleration(bool accelerationStatus = true) {
-        if (currentFuel > 0) {
+        if (this->currentFuel > 0) {
             cout << "Вжжжжьььь.." << endl;
         }
         else {
@@ -484,142 +474,162 @@ public:
     }
 
     void Empty(float tankCapacity = 0) {
-        if (currentFuel <= 0) {
+        if (this->currentFuel <= 0) {
             cout << "*двигатель заглох*" << endl;
             cout << "*на приборной панели горит лампочка возле уровня топлива*" << endl;
         }
         else {
-            cout << "Бак не пуст. Текущий уровень топлива: " << currentFuel << " литров." << endl;
+            cout << "Бак не пуст. Текущий уровень топлива: " << this->currentFuel << " литров." << endl;
         }
     }
 };
 
 class Bird {
 private:
-    string birdName = "Стриж"; // марка птицы
-    float wingspan = 0.7; // размах крыльев
-    string color = "Бело-черный"; // цвет
-    string habitat = "Пригород"; // место обитания
-    bool isFlying = false; // находится ли в полете?
-    int age = 1; // возраст птицы
-    bool isSinging = false; // поет ли птица
+    string birdName = "Стриж";
+    float wingspan = 0.7;
+    string color = "Бело-черный";
+    string habitat = "Пригород";
+    bool isFlying = false;
+    int age = 1;
+    bool isSinging = false;
 
 public:
-    // Геттеры и сеттеры для полей класса Bird
     string GetBirdName() const {
-        return birdName;
+        return this->birdName;
     }
 
-    void SetBirdName(const string& name) {
-        birdName = name;
+    void SetBirdName(const string& birdName) {
+        this->birdName = birdName;
     }
 
     float GetWingspan() const {
-        return wingspan;
+        return this->wingspan;
     }
 
-    void SetWingspan(float span) {
-        wingspan = span;
+    void SetWingspan(float wingspan) {
+        this->wingspan = wingspan;
     }
 
     string GetColor() const {
-        return color;
+        return this->color;
     }
 
-    void SetColor(const string& birdColor) {
-        color = birdColor;
+    void SetColor(const string& color) {
+        this->color = color;
     }
 
     string GetHabitat() const {
-        return habitat;
+        return this->habitat;
     }
 
-    void SetHabitat(const string& birdHabitat) {
-        habitat = birdHabitat;
+    void SetHabitat(const string& habitat) {
+        this->habitat = habitat;
     }
 
     bool IsFlying() const {
-        return isFlying;
+        return this->isFlying;
     }
 
-    void SetIsFlying(bool flyingStatus) {
-        isFlying = flyingStatus;
+    void SetIsFlying(bool isFlying) {
+        this->isFlying = isFlying;
     }
 
     int GetAge() const {
-        return age;
+        return this->age;
+    }
+
+    void SetAge(int age) {
+        this->age = age;
     }
 
     bool IsSinging() const {
-        return isSinging;
+        return this->isSinging;
     }
 
-    void SetIsSinging(bool singingStatus) {
-        isSinging = singingStatus;
+    void SetIsSinging(bool isSinging) {
+        this->isSinging = isSinging;
     }
 
-    // Остальные методы класса Bird
-    void Sing() {
-        if (isSinging) {
-            cout << "Птица уже поет." << endl;
+    void Fly() {
+        if (!this->isFlying) {
+            cout << this->birdName << " взлетел в небо!" << endl;
+            this->isFlying = true;
         }
         else {
-            cout << "Чик чирик" << endl;
-            isSinging = true;
+            cout << this->birdName << " уже летает." << endl;
+        }
+    }
+
+    void Land() {
+        if (this->isFlying) {
+            cout << this->birdName << " приземлился." << endl;
+            this->isFlying = false;
+        }
+        else {
+            cout << this->birdName << " и так на земле." << endl;
+        }
+    }
+
+    void Sing() {
+        if (!this->isSinging) {
+            cout << this->birdName << " запел свою песню." << endl;
+            this->isSinging = true;
+        }
+        else {
+            cout << this->birdName << " уже поет." << endl;
         }
     }
 
     void StopSinging() {
-        if (isSinging) {
-            cout << "Птица перестала петь." << endl;
-            isSinging = false;
+        if (this->isSinging) {
+            cout << this->birdName << " прекратил пение." << endl;
+            this->isSinging = false;
         }
         else {
-            cout << "Птица уже не поет." << endl;
+            cout << this->birdName << " и так молчит." << endl;
         }
-    }
-
-    void Fly(bool isFlyingStatus = true) {
-        cout << "Ухты летает" << endl;
-        isFlying = isFlyingStatus;
-    }
-
-    void Migrate() {
-        cout << "Птица начала миграцию в поисках теплых мест..." << endl;
-    }
-
-    void DisplayInfo() {
-        cout << "Информация о птице:" << endl;
-        cout << "Название: " << birdName << endl;
-        cout << "Размах крыльев: " << wingspan << " метра" << endl;
-        cout << "Цвет: " << color << endl;
-        cout << "Место обитания: " << habitat << endl;
-
-        if (isFlying) {
-            cout << "В полете: Да" << endl;
-        }
-        else {
-            cout << "В полете: Нет" << endl;
-        }
-
-        cout << "Возраст: " << age << " год(а)" << endl;
-
-        if (isSinging) {
-            cout << "Пение: Да" << endl;
-        }
-        else {
-            cout << "Пение: Нет" << endl;
-        }
-    }
-
-    void SetAge1(int newAge) {
-        age = newAge;
-        cout << "Возраст птицы установлен на " << newAge << " год(а)" << endl;
     }
 };
 
 int main() {
-    setlocale(LC_ALL, "russian");
+    // Пример использования классов
+    Cat myCat;
+    myCat.SetFurColor("черный");
+    myCat.SetNick("Мурзик");
+    myCat.MakeMeow();
+    myCat.Eat("рыбу");
+    myCat.Walk();
+
+    Human myHuman;
+    myHuman.SetName("Иван");
+    myHuman.SetAge(30);
+    myHuman.Breathe();
+    myHuman.Run();
+
+    Room myRoom;
+    myRoom.SetRoomName("Спальня");
+    myRoom.ThrowParty();
+    myRoom.Cry();
+
+    Phone myPhone;
+    myPhone.SetBrand("Samsung");
+    myPhone.OutgoingCall("123-456-789");
+    myPhone.IncomingCall("987-654-321");
+
+    Car myCar;
+    myCar.SetColor("Синий");
+    myCar.DisableAlarm();
+    myCar.ActivateAlarm();
+    myCar.Acceleration();
+    myCar.ApplyBrakes();
+    myCar.Empty();
+
+    Bird myBird;
+    myBird.Fly();
+    myBird.Sing();
+    myBird.Land();
+    myBird.StopSinging();
 
     return 0;
 }

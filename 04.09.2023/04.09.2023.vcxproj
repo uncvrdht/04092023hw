@@ -127,7 +127,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="04.09.2023.cpp" />
+    <ClCompile Include="Cat.cpp" />
+    <ClCompile Include="Dog.cpp" />
+    <ClCompile Include="Fish.cpp" />
+    <ClCompile Include="Lion.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Parrot.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cat.h" />
+    <ClInclude Include="Dog.h" />
+    <ClInclude Include="Fish.h" />
+    <ClInclude Include="Lion.h" />
+    <ClInclude Include="Parrot.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

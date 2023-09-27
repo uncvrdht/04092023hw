@@ -3,67 +3,71 @@
 #include <string>
 #include <windows.h>
 #include <ctime>
+
 using namespace std;
 
+Cat::Cat() : Cat("Unnamed", 1, 1.0) {
+    
+}
 
-    Cat::Cat() {
-        name = "Unnamed";
-        age = 1;
-        weight = 1.0;
-        satiety = 100; // Начальный уровень сытости
-    }
+Cat::Cat(const string& catName, int catAge, float catWeight) {
+    name = catName;
+    age = catAge;
+    weight = catWeight;
+    satiety = 100;
+}
 
-    void Cat::SetName(const string& catName) {
-        name = catName;
-    }
+Cat::Cat(const string& catName) : Cat(catName, 1, 1.0) {
+   
+}
 
-    void Cat::SetAge(int catAge) {
-        age = catAge;
-    }
+Cat::Cat(int catAge) : Cat("Unnamed", catAge, 1.0) {
+   
+}
 
-    void Cat::SetWeight(float catWeight) {
-        weight = catWeight;
-    }
+Cat::Cat(float catWeight) : Cat("Unnamed", 1, catWeight) {
+  
+}
 
-    // Другие сеттеры для характеристик котика
+// РћСЃС‚Р°Р»СЊРЅС‹Рµ РјРµС‚РѕРґС‹ РєР»Р°СЃСЃР° Cat РѕСЃС‚Р°СЋС‚СЃСЏ Р±РµР· РёР·РјРµРЅРµРЅРёР№
 
-    void Cat::About() {
-        cout << "Имя: " << name << endl;
-        cout << "Возраст: " << age << " год(а)" << endl;
-        cout << "Вес: " << weight << " кг" << endl;
-        cout << "Уровень сытости: " << satiety << "%" << endl;
-    }
+void Cat::About() {
+    cout << "РРјСЏ: " << name << endl;
+    cout << "Р’РѕР·СЂР°СЃС‚: " << age << " РіРѕРґ(Р°)" << endl;
+    cout << "Р’РµСЃ: " << weight << " РєРі" << endl;
+    cout << "РЈСЂРѕРІРµРЅСЊ СЃС‹С‚РѕСЃС‚Рё: " << satiety << "%" << endl;
+}
 
-    void Cat::SleepCat() {
-        cout << name << " спит..." << endl;
-        satiety -= 5; // Уровень сытости уменьшается во время сна
-        Sleep(2000); // Имитация сна
-    }
+void Cat::SleepCat() {
+    cout << name << " СЃРїРёС‚..." << endl;
+    satiety -= 5;
+    Sleep(2000);
+}
 
-    void Cat::Walk() {
-        cout << name << " идет на прогулку..." << endl;
-        satiety -= 10; // Уровень сытости уменьшается во время прогулки
-        weight -= 0.1; // Вес уменьшается во время активности
-        Sleep(3000); // Имитация прогулки
-    }
+void Cat::Walk() {
+    cout << name << " РёРґРµС‚ РЅР° РїСЂРѕРіСѓР»РєСѓ..." << endl;
+    satiety -= 10;
+    weight -= 0.1;
+    Sleep(3000);
+}
 
-    void Cat::Play() {
-        cout << name << " играет с мячом..." << endl;
-        satiety -= 15; // Уровень сытости уменьшается во время игры
-        weight -= 0.2; // Вес уменьшается во время активности
-        Sleep(2000); // Имитация игры
-    }
+void Cat::Play() {
+    cout << name << " РёРіСЂР°РµС‚ СЃ РјСЏС‡РѕРј..." << endl;
+    satiety -= 15;
+    weight -= 0.2;
+    Sleep(2000);
+}
 
-    void Cat::Hunt() {
-        cout << name << " выходит на охоту..." << endl;
-        satiety -= 20; // Уровень сытости уменьшается во время охоты
-        weight -= 0.3; // Вес уменьшается во время активности
-        Sleep(4000); // Имитация охоты
-    }
+void Cat::Hunt() {
+    cout << name << " РІС‹С…РѕРґРёС‚ РЅР° РѕС…РѕС‚Сѓ..." << endl;
+    satiety -= 20;
+    weight -= 0.3;
+    Sleep(4000);
+}
 
-    void Cat::Eat() {
-        cout << name << " кушает..." << endl;
-        satiety += 30; // Уровень сытости увеличивается после еды
-        weight += 0.15; // Вес увеличивается после еды
-        Sleep(1500); // Имитация приема пищи
-    }
+void Cat::Eat() {
+    cout << name << " РєСѓС€Р°РµС‚..." << endl;
+    satiety += 30;
+    weight += 0.15;
+    Sleep(1500);
+}
